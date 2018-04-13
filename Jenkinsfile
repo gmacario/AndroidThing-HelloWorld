@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'gmacario/android-devenv:latest'
+    }
+  }
   stages {
     stage('Build') {
       steps {
